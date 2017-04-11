@@ -1,0 +1,7 @@
+<h1>articles Index</h1>
+<%= link_to 'New Article', new_article_path %>
+<% @articles.each do |article| %>
+  <h2><%= article.title %></h2>
+  <p><%= article.content %></p>
+  <%= link_to article.title, article_path(article) %>
+<% end %>

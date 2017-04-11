@@ -1,0 +1,10 @@
+<h1>Tasks Show</h1>
+
+<h2><%= @article.title %></h2>
+<p><%= @article.content %></p>
+
+<p><%= link_to "All Articles", articles_path %></p>
+<p><%= link_to "Edit article", edit_article_path(@article) %></p>
+<p><%= link_to "Delete", article_path(@article),
+      method: :delete,
+      data: { confirm: "Are you sure?" } %></p>
